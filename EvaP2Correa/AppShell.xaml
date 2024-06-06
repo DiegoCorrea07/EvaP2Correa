@@ -8,8 +8,8 @@
     Title="EvaP2Correa">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        Title="Bienvenido "
+        ContentTemplate="{DataTemplate local:RecargasDC}"
         Route="MainPage" />
 
 </Shell>

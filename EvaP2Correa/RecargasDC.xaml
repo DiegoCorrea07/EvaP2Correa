@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EvaP2Correa.RecargasDC">
+
+    <ScrollView>
+        <StackLayout Padding="20" BackgroundColor="White">
+            
+            <!-- Logo de mi app-->
+            <Image Source="logodc.png"  WidthRequest="360"/>
+
+            <Label Text="Ingrese el número celular" TextColor="#050C9C"/>
+
+            <Entry x:Name="IngresarCel" Placeholder="Numero de telefono" Keyboard="Telephone" BackgroundColor="White" TextColor="#050C9C" FontSize="20"/>
+
+            <!-- Seleccion de la operadora mediante un picker -->
+            <Picker x:Name="OperadoraDCC" Title="--Seleccionar Operador--" TextColor="White" BackgroundColor="#FF8F00" >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Movistar</x:String>
+                        <x:String>CNT</x:String>
+                        <x:String>Claro</x:String>
+                        <x:String>Tuenti</x:String>
+                        <x:String>DCFast7G</x:String>
+                        <x:String>GODC7G</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <!-- Opciones de monto de recarga -->
+            <RadioButton x:Name="R1" Content="3 dolares" GroupName="Recarga"  TextColor="#050C9C" CheckedChanged="ValorRecarga"/>
+            <RadioButton x:Name="R2" Content="5 dolares" GroupName="Recarga"  TextColor="#050C9C" CheckedChanged="ValorRecarga"/>
+            <RadioButton x:Name="R3" Content="10 dolares" GroupName="Recarga"  TextColor="#050C9C" CheckedChanged="ValorRecarga"/>
+
+            <!--Botón hacer recarga-->
+            <Button Text="Hacer Recarga" TextColor="White" BackgroundColor="#050C9C" Clicked="RecargarBotonDC" />
+
+            <Label AnchorY="5"/>
+            <Image Source="bannerdc.png"  WidthRequest="360"/>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
