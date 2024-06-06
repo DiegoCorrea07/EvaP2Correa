@@ -48,7 +48,7 @@
         {
             var fecha = DateTime.Now.ToString("dd/MM/yyyy");
             var content = $"Se hizo una recarga de {amount} dolares el: {fecha}";
-            var recargaArch = Path.Combine(FileSystem.AppDataDirectory, $"{numeroDC}.txt");
+            var recargaArch = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"{numeroDC}.txt");
 
             using (var writer = new StreamWriter(recargaArch))
             {
